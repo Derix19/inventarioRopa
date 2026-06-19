@@ -10,8 +10,8 @@ Asignatura: Programación I (SIS-112) | Gestión 1/2026
 
 | Nombre completo | Carrera |
 |---|---|
-| Apaza Colque Helen | Ingeniería de Sistemas |
-| Aglaya Urquieta Velez | Ingeniería de Sistemas |
+| Apaza Colque Helen | Ingeniería Industrial |
+| Aglaya Urquieta Velez | Ingeniería Industrial |
 
 ---
 
