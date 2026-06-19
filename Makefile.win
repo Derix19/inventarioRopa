@@ -1,0 +1,52 @@
+# Project: inventarioRopa
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o src/archivos.o src/busqueda.o src/crud.o src/intercalacion.o src/ordenacion.o src/reporte.o src/utilidades.o src/colores.o
+LINKOBJ  = main.o src/archivos.o src/busqueda.o src/crud.o src/intercalacion.o src/ordenacion.o src/reporte.o src/utilidades.o src/colores.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = inventarioRopa.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+src/archivos.o: src/archivos.cpp
+	$(CPP) -c src/archivos.cpp -o src/archivos.o $(CXXFLAGS)
+
+src/busqueda.o: src/busqueda.cpp
+	$(CPP) -c src/busqueda.cpp -o src/busqueda.o $(CXXFLAGS)
+
+src/crud.o: src/crud.cpp
+	$(CPP) -c src/crud.cpp -o src/crud.o $(CXXFLAGS)
+
+src/intercalacion.o: src/intercalacion.cpp
+	$(CPP) -c src/intercalacion.cpp -o src/intercalacion.o $(CXXFLAGS)
+
+src/ordenacion.o: src/ordenacion.cpp
+	$(CPP) -c src/ordenacion.cpp -o src/ordenacion.o $(CXXFLAGS)
+
+src/reporte.o: src/reporte.cpp
+	$(CPP) -c src/reporte.cpp -o src/reporte.o $(CXXFLAGS)
+
+src/utilidades.o: src/utilidades.cpp
+	$(CPP) -c src/utilidades.cpp -o src/utilidades.o $(CXXFLAGS)
+
+src/colores.o: src/colores.cpp
+	$(CPP) -c src/colores.cpp -o src/colores.o $(CXXFLAGS)
